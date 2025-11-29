@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Victoria Mazzali — Nail Atelier Real</title>
+<link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Victoria Mazzali — Salão Real de Unhas</h1>
+    <p class="small">Detalhes especiais • Experiência real • Porto, Lordelo</p>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="card">
+        <h2>Bem-vinda ao Atelier Real</h2>
+        <p class="lead">Experiência luxuosa, design artesanal e atendimento personalizado.</p>
+
+        <div class="button-group">
+          <button id="btnAgendar" class="btn">Agende Já</button>
+          <button id="contact-btn" class="btn secondary">Contacto</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Victoria Mazzali</h3>
+      <p><strong>Telefone:</strong> +351 936 745 953</p>
+      <p><strong>Email:</strong> victoriatome18@gmail.com</p>
+      <p><strong>Morada:</strong> Lordelo, Porto</p>
+      <blockquote class="motto">“Cuide de si. A sua presença merece brilhar.”</blockquote>
+    </section>
+
+    <section id="services" class="card">
+      <h2>Serviços</h2>
+      <div class="grid-3">
+        <div class="service"><h4>Manicure Real</h4><p class="small muted">Esmalte gel e design detalhado.</p></div>
+        <div class="service"><h4>Alongamento</h4><p class="small muted">Tip ou moldagem personalizada.</p></div>
+        <div class="service"><h4>VIP Treatment</h4><p class="small muted">Massagem, acabamento dourado.</p></div>
+      </div>
+    </section>
+
+    <section id="agendamentoSection" class="card">
+      <h2>Agendamento</h2>
+      <p class="small muted">Preencha os dados e confirme — será enviado para WhatsApp.</p>
+      <form id="booking-form" class="booking-form" novalidate>
+        <input id="client-name" name="name" placeholder="Nome completo" required />
+        <input id="client-phone" name="phone" placeholder="Telefone (ex: 936745953)" required />
+        <label for="service-select">Serviço</label>
+        <select id="service-select" name="service" required>
+          <option value="Manicure Real">Manicure Real</option>
+          <option value="Alongamento de Unhas">Alongamento de Unhas</option>
+          <option value="Tratamento VIP">Tratamento VIP</option>
+        </select>
+        <div class="row">
+          <input id="date" name="date" type="date" placeholder="Data" required />
+          <input id="time" name="time" type="time" placeholder="Hora" required />
+        </div>
+        <textarea id="notes" name="notes" rows="3" placeholder="Observações (ex: cor preferida)"></textarea>
+
+        <button type="submit" class="submit">Confirmar e Enviar para WhatsApp</button>
+      </form>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contacto</h2>
+      <p><strong>Telefone:</strong> +351 936 745 953</p>
+      <p><strong>Email:</strong> victoriatome18@gmail.com</p>
+      <p class="small muted">Lordelo, Porto — Ligue ou envie mensagem para confirmar.</p>
+    </section>
+  </main>
+
+  <footer class="card">
+    <div>© <strong>Victoria Mazzali</strong> — Nail Atelier</div>
+    <div class="small muted">Design real • Atendimento VIP</div>
+  </footer>
+
+  <script defer src="index.js"></script>
+</body>
+</html>
