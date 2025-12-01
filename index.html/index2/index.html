@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Victoria Mazzali — Nail Atelier Real em Lordelo, Porto. Agende via WhatsApp para manicure, alongamento e tratamentos VIP." />
+    <title>Victoria Mazzali — Nail Atelier Real</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <h1>Victoria Mazzali</h1>
+          <span class="tagline">Nail Atelier Real</span>
+        </div>
+
+        <nav class="top-actions" aria-label="Redes sociais">
+          <!-- SVG inline Instagram -->
+          <a class="icon-link" href="https://www.instagram.com/victoriamazzalipt?igsh=MTJidXVyMzIwbGxqaw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg class="inline-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm6.5-.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+            </svg>
+          </a>
+
+          <!-- SVG inline WhatsApp -->
+          <a class="icon-link" href="https://wa.me/351936745953" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <svg class="inline-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.966-.273-.099-.472-.148-.672.149-.198.297-.768.966-.942 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.787-1.48-1.761-1.653-2.059-.173-.297-.018-.458.131-.606.134-.133.298-.347.447-.52.149-.173.198-.298.297-.497.099-.198.05-.372-.025-.52-.074-.149-.672-1.618-.921-2.213-.242-.58-.487-.5-.672-.51l-.573-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.077 4.487 0.71.306 1.262.489 1.693.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.414-.074-.124-.272-.198-.57-.347z"/><path d="M12.004 2C6.476 2 2 6.476 2 12.004c0 1.992.523 3.84 1.434 5.435L2 22l4.68-1.215A9.967 9.967 0 0 0 12.004 22C17.532 22 22 17.524 22 12.004 22 6.476 17.532 2 12.004 2z"/>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO SLIDESHOW -->
+    <section class="hero-viewport" aria-hidden="false">
+      <div class="hero-slideshow" id="heroSlideshow">
+        <div class="slide" style="background-image:url('./WhatsApp\ Image\ 2025-12-01\ at\ 14.54.53.jpeg')" data-index="0" aria-hidden="false"></div>
+        <div class="slide" style="background-image:url('./WhatsApp\ Image\ 2025-12-01\ at\ 14.54.54d.jpeg')" data-index="1" aria-hidden="true"></div>
+        <div class="slide" style="background-image:url('./WhatsApp\ Image\ 2025-12-01\ at\ 14.54.5d.jpeg')" data-index="2" aria-hidden="true"></div>
+      </div>
+
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h2 class="hero-title">Atelier Real • Unhas de Excelência</h2>
+          <p class="hero-sub">Design de Sobrancelhas exclusivos, Unhas em gel e esmaltação, materiais premium e atendimento VIP em Lordelo — agende a sua experiência.</p>
+
+          <div class="hero-ctas">
+            <button id="btnAgendar" class="btn btn-cta" type="button"><i class="fas fa-calendar-check"></i> Agende Já</button>
+            <a class="btn btn-ghost" href="https://www.instagram.com/victoriamazzalipt?igsh=MTJidXVyMzIwbGxqaw==" target="_blank" rel="noopener noreferrer">
+              <!-- pequeno SVG inline antes do texto -->
+              <svg class="inline-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm6.5-.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+              Instagram
+            </a>
+          </div>
+        </div>
+
+        <div class="slideshow-controls" id="slideshowControls" aria-hidden="false">
+          <button id="prevSlide" class="control" aria-label="Anterior">‹</button>
+          <div id="dots" class="dots" role="tablist" aria-label="Navegação de slides"></div>
+          <button id="nextSlide" class="control" aria-label="Próximo">›</button>
+        </div>
+      </div>
+    </section>
+
+    <main class="container">
+      <section class="card info-card">
+        <div class="info-left">
+          <h3>Victoria Mazzali</h3>
+          <p class="muted">Nail Atelier Real — Lordelo, Porto</p>
+
+          <ul class="contact-list">
+            <li>
+              <a href="https://wa.me/351936745953" target="_blank" rel="noopener noreferrer">
+                <!-- small inline WhatsApp SVG -->
+                <svg class="mini-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.966-.273-.099-.472-.148-.672.149-.198.297-.768.966-.942 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.787-1.48-1.761-1.653-2.059-.173-.297-.018-.458.131-.606.134-.133.298-.347.447-.52.149-.173.198-.298.297-.497.099-.198.05-.372-.025-.52-.074-.149-.672-1.618-.921-2.213-.242-.58-.487-.5-.672-.51l-.573-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.077 4.487 0.71.306 1.262.489 1.693.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.414-.074-.124-.272-.198-.57-.347z"/><path d="M12.004 2C6.476 2 2 6.476 2 12.004c0 1.992.523 3.84 1.434 5.435L2 22l4.68-1.215A9.967 9.967 0 0 0 12.004 22C17.532 22 22 17.524 22 12.004 22 6.476 17.532 2 12.004 2z"/></svg>
+                WhatsApp: +351 936 745 953
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/victoriamazzalipt?igsh=MTJidXVyMzIwbGxqaw==" target="_blank" rel="noopener noreferrer">
+                <svg class="mini-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm6.5-.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+                Instagram: @victoriamazzalipt
+              </a>
+            </li>
+            <li><a href="mailto:victoriatome18@gmail.com"><i class="fas fa-envelope"></i> victoriatome18@gmail.com</a></li>
+          </ul>
+        </div>
+
+        <div class="info-right">
+          <blockquote>“Cuide de si. A sua presença merece brilhar.”</blockquote>
+        </div>
+      </section>
+
+      <section id="services" class="card services-card">
+        <h4 class="section-title">Serviços em Destaque</h4>
+        <div class="grid-3">
+          <a href="./WhatsApp Image 2025-12-01 at 14.54.5d.jpeg"><article class="service">
+            <img src="./WhatsApp Image 2025-12-01 at 14.54.5d.jpeg" alt="Manicure" class="service-thumb">
+            <h5>Manicure Real</h5>
+            <p class="muted">Esmalte gel premium e design personalizado.</p>
+          </article></a>
+         <a href="./WhatsApp Image 2025-12-01 at 14.54.53.jpeg"> <article class="service">
+            <img src="./WhatsApp Image 2025-12-01 at 14.54.53.jpeg" alt="Alongamento" class="service-thumb">
+            <h5>Alongamento</h5>
+            <p class="muted">Tip ou moldagem com gel de alta fixação.</p>
+          </article></a>
+        <a href="./WhatsApp Image 2025-12-01 at 15.10.04.jpeg">  <article class="service">
+           <img src="./WhatsApp Image 2025-12-01 at 15.10.04.jpeg" alt="Sobrancelhas" class="service-thumb">
+           <h5>Sobrancelhas</h5>
+            <p class="muted">Sobrancelhas, design com rena.</p>
+          </article>  </a> 
+        </div>
+      </section>
+
+      <section id="agendamentoSection" class="card booking-card">
+        <h4 class="section-title">Reserve Agora</h4>
+        <form id="booking-form" class="booking-form" novalidate aria-describedby="booking-feedback">
+          <div class="form-row">
+            <label>
+              Nome
+              <input id="client-name" name="name" placeholder="Ex: Maria Silva" required />
+            </label>
+
+            <label>
+              Telefone
+              <input id="client-phone" name="phone" type="tel" placeholder="936745953" required />
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label>
+              Serviço
+              <select id="service-select" required>
+                <option value="">Selecione</option>
+                <option>Manicure Real</option>
+                <option>Alongamento de Unhas</option>
+                <option>Tratamento VIP</option>
+              </select>
+            </label>
+
+            <div class="form-row-mini" style="display:flex;gap:12px;width:100%;">
+              <label style="flex:1">
+                Data
+                <input id="date" type="date" required />
+              </label>
+              <label style="flex:1">
+                Hora
+                <input id="time" type="time" required />
+              </label>
+            </div>
+          </div>
+
+          <label>
+            Observações
+            <textarea id="notes" rows="3" placeholder="Ex: cor preferida"></textarea>
+          </label>
+
+          <div class="form-actions" style="display:flex;justify-content:flex-end;margin-top:8px">
+            <button type="submit" class="submit">
+              <!-- inline WA SVG small + texto -->
+              <svg class="mini-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.966-.273-.099-.472-.148-.672.149-.198.297-.768.966-.942 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.787-1.48-1.761-1.653-2.059-.173-.297-.018-.458.131-.606.134-.133.298-.347.447-.52.149-.173.198-.298.297-.497.099-.198.05-.372-.025-.52-.074-.149-.672-1.618-.921-2.213-.242-.58-.487-.5-.672-.51l-.573-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.077 4.487 0.71.306 1.262.489 1.693.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.414-.074-.124-.272-.198-.57-.347z"/><path d="M12.004 2C6.476 2 2 6.476 2 12.004c0 1.992.523 3.84 1.434 5.435L2 22l4.68-1.215A9.967 9.967 0 0 0 12.004 22C17.532 22 22 17.524 22 12.004 22 6.476 17.532 2 12.004 2z"/></svg>
+              Confirmar & Enviar
+            </button>
+          </div>
+
+          <div id="booking-feedback" role="status" aria-live="polite" class="visually-hidden"></div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>© <strong>Victoria Mazzali</strong> — Nail Atelier Real</div>
+        <div class="footer-links">
+          <a href="https://www.instagram.com/victoriamazzalipt?igsh=MTJidXVyMzIwbGxqaw==" target="_blank" rel="noopener noreferrer">
+            <svg class="mini-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9zm6.5-.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/></svg>
+            Instagram
+          </a>
+          <a href="https://wa.me/351936745953" target="_blank" rel="noopener noreferrer">
+            <svg class="mini-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.966-.273-.099-.472-.148-.672.149-.198.297-.768.966-.942 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.787-1.48-1.761-1.653-2.059-.173-.297-.018-.458.131-.606.134-.133.298-.347.447-.52.149-.173.198-.298.297-.497.099-.198.05-.372-.025-.52-.074-.149-.672-1.618-.921-2.213-.242-.58-.487-.5-.672-.51l-.573-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.077 4.487 0.71.306 1.262.489 1.693.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.414-.074-.124-.272-.198-.57-.347z"/><path d="M12.004 2C6.476 2 2 6.476 2 12.004c0 1.992.523 3.84 1.434 5.435L2 22l4.68-1.215A9.967 9.967 0 0 0 12.004 22C17.532 22 22 17.524 22 12.004 22 6.476 17.532 2 12.004 2z"/></svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script defer src="index.js"></script>
+  </body>
+</html>

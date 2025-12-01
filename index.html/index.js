@@ -1,90 +1,123 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const agendarBtn = document.getElementById('btnAgendar');
+// ...existing code...
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('booking-form');
+  const btnAgendar = document.getElementById('btnAgendar');
   const contactBtn = document.getElementById('contact-btn');
-  const agendamentoSection = document.getElementById('agendamentoSection');
-  const bookingForm = document.getElementById('booking-form');
 
-  // segurança: se elemento não existir, não tentar usar
-  if (agendarBtn) {
-    agendarBtn.addEventListener('click', () => {
-      criarPurpurina();
-      // rolar suavemente para a seção de agendamento após pequena espera
-      setTimeout(() => {
-        if (agendamentoSection) agendamentoSection.scrollIntoView({ behavior: 'smooth' });
-      }, 700);
+  // definir data mínima como hoje
+  const dateInput = document.getElementById('date');
+  if (dateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.min = today;
+  }
+
+  if (btnAgendar) {
+    btnAgendar.addEventListener('click', () => {
+      document.getElementById('agendamentoSection').scrollIntoView({ behavior: 'smooth' });
+      const nameInput = document.getElementById('client-name');
+      if (nameInput) nameInput.focus();
     });
   }
 
   if (contactBtn) {
     contactBtn.addEventListener('click', () => {
-      const contact = document.getElementById('contact');
-      if (contact) contact.scrollIntoView({ behavior: 'smooth' });
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
     });
   }
 
-  // FORM -> WhatsApp
-  if (bookingForm) {
-    bookingForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const name = (document.getElementById('client-name') || {}).value || '';
-      const phone = (document.getElementById('client-phone') || {}).value || '';
-      const service = (document.getElementById('service-select') || {}).value || '';
-      const date = (document.getElementById('date') || {}).value || '';
-      const time = (document.getElementById('time') || {}).value || '';
-      const notes = (document.getElementById('notes') || {}).value || '';
-
-      if (!/^[0-9]{9}$/.test(phone)) {
-        alert('Insira um telefone válido de 9 dígitos (ex: 936745953).');
-        return;
-      }
-      if (!date || !time) {
-        alert('Escolha data e hora.');
-        return;
-      }
-
-      const whatsappNumber = '351936745953';
-      const message = `Agendamento - Victoria Mazzali\nNome: ${name}\nTelefone: ${phone}\nServiço: ${service}\nData: ${date}\nHora: ${time}\nObservações: ${notes}`;
-      const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-      window.open(url, '_blank');
-    });
+  function normalizePhone(raw) {
+    if (!raw) return '';
+    let p = raw.replace(/[^\d+]/g, '');
+    if (p.startsWith('+')) p = p.slice(1);
+    if (p.startsWith('351')) p = p.slice(3);
+    while (p.length > 0 && p.startsWith('0')) p = p.slice(1);
+    return p;
   }
 
-  // FUNÇÃO: cria purpurina (peças DOM animadas e removidas)
-  function criarPurpurina() {
-    const colors = ['#f6e7d7', '#eadff2', '#fbeae6', '#d4af37'];
-    const total = 48;
-    for (let i = 0; i < total; i++) {
-      const el = document.createElement('div');
-      el.className = 'glitter';
-      // estilo inline para evitar falta de CSS
-      const size = 6 + Math.round(Math.random() * 10);
-      el.style.width = `${size}px`;
-      el.style.height = `${size}px`;
-      el.style.position = 'fixed';
-      el.style.left = `${Math.random() * window.innerWidth}px`;
-      el.style.top = `${Math.random() * (window.innerHeight * 0.6)}px`;
-      el.style.background = colors[Math.floor(Math.random() * colors.length)];
-      el.style.borderRadius = '50%';
-      el.style.pointerEvents = 'none';
-      el.style.opacity = '0.95';
-      el.style.zIndex = 9999;
-      // animação via JS: movimento + fade
-      const dx = (Math.random() - 0.5) * 400;
-      const dy = -100 - Math.random() * 300;
-      const rot = (Math.random() - 0.5) * 720;
-      el.style.transition = 'transform 900ms cubic-bezier(.22,.9,.3,1), opacity 900ms ease-out';
-      document.body.appendChild(el);
-
-      // força layout e aplica transform
-      requestAnimationFrame(() => {
-        el.style.transform = `translate(${dx}px, ${dy}px) rotate(${rot}deg) scale(${0.9 + Math.random()})`;
-        el.style.opacity = '0';
-      });
-
-      // remover após animação
-      setTimeout(() => {
-        if (el && el.parentNode) el.parentNode.removeChild(el);
-      }, 1100);
+  function showToast(text, time = 3000) {
+    let t = document.querySelector('.toast');
+    if (!t) {
+      t = document.createElement('div');
+      t.className = 'toast';
+      document.body.appendChild(t);
     }
+    t.textContent = text;
+    t.classList.add('show');
+    clearTimeout(t._h);
+    t._h = setTimeout(() => t.classList.remove('show'), time);
   }
+
+  function createModal(messagePreview, onConfirm) {
+    const backdrop = document.createElement('div');
+    backdrop.className = 'modal-backdrop';
+    backdrop.innerHTML = `
+      <div class="modal" role="dialog" aria-modal="true" aria-label="Confirmar mensagem">
+        <h4>✨ Confirmar Agendamento</h4>
+        <div class="preview">${messagePreview}</div>
+        <div style="display:flex;gap:12px;justify-content:flex-end;margin-top:20px">
+          <button id="modal-cancel" class="btn btn-secondary">Editar</button>
+          <button id="modal-confirm" class="btn btn-primary">
+            <i class="fab fa-whatsapp"></i> Enviar
+          </button>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(backdrop);
+
+    const cancel = backdrop.querySelector('#modal-cancel');
+    const confirm = backdrop.querySelector('#modal-confirm');
+    cancel.focus();
+
+    function remove() { backdrop.remove(); }
+    cancel.addEventListener('click', () => { remove(); });
+    confirm.addEventListener('click', () => { onConfirm(); remove(); });
+
+    backdrop.addEventListener('click', (e) => {
+      if (e.target === backdrop) remove();
+    });
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('client-name').value.trim();
+    const phoneRaw = document.getElementById('client-phone').value.trim();
+    const phone = normalizePhone(phoneRaw);
+    const service = document.getElementById('service-select').value;
+    const date = document.getElementById('date').value;
+    const time = document.getElementById('time').value;
+    const notes = document.getElementById('notes').value.trim();
+
+    if (!name || !phone || phone.length !== 9 || !date || !time || service === '') {
+      showToast('❌ Preencha todos os campos obrigatórios corretamente.');
+      return;
+    }
+
+    const lines = [
+      `👋 Olá, sou ${name}.`,
+      `💅 Serviço: ${service}`,
+      `📅 Data: ${date}`,
+      `⏰ Hora: ${time}`,
+      notes ? `📝 Observações: ${notes}` : ''
+    ].filter(Boolean);
+
+    const preview = lines.join('\n');
+    createModal(preview, () => {
+      const text = encodeURIComponent(preview);
+      const phoneInternational = '351936745953';
+      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      const whatsappUrl = isMobile
+        ? `whatsapp://send?phone=${phoneInternational}&text=${text}`
+        : `https://api.whatsapp.com/send?phone=${phoneInternational}&text=${text}`;
+
+      try {
+        window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        showToast('✅ A abrir WhatsApp...');
+        form.reset();
+      } catch (err) {
+        showToast('❌ Não foi possível abrir o WhatsApp.');
+      }
+    });
+  });
+
 });
+// ...existing code...

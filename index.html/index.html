@@ -1,84 +1,239 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-PT">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Victoria Mazzali — Nail Atelier Real</title>
-<link rel="stylesheet" href="index.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-  <header>
-    <h1>Victoria Mazzali — Salão Real de Unhas</h1>
-    <p class="small">Detalhes especiais • Experiência real • Porto, Lordelo</p>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Victoria Mazzali — Nail Atelier Real em Lordelo, Porto. Agende via WhatsApp para manicure, alongamento e tratamentos VIP." />
+    <title>Victoria Mazzali — Nail Atelier Real</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <h1>✨ Victoria Mazzali</h1>
+          <p class="tagline">Nail Atelier Real</p>
+        </div>
+        <nav class="social-header">
+          <a href="https://www.instagram.com/victoriamazzalipt?igsh=MTJidXVyMzIwbGxqaw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram Victoria Mazzali">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/351936745953" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Victoria Mazzali">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </nav>
+      </div>
+    </header>
 
-  <main>
-    <section class="hero">
-      <div class="card">
-        <h2>Bem-vinda ao Atelier Real</h2>
-        <p class="lead">Experiência luxuosa, design artesanal e atendimento personalizado.</p>
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h2 class="hero-title">Bem-vinda ao Atelier Real</h2>
+            <p class="hero-subtitle">
+              Experiência luxuosa, design artesanal e atendimento personalizado para quem merece brilhar.
+            </p>
+            <div class="button-group">
+              <button id="btnAgendar" class="btn btn-primary">
+                <i class="fas fa-calendar-check"></i> Agende Já
+              </button>
+              <button id="contact-btn" class="btn btn-secondary">
+                <i class="fas fa-phone"></i> Contacto
+              </button>
+            </div>
+          </div>
+          <div class="hero-decoration">
+            <div class="nail-icon">💅🏻</div>
+          </div>
+        </div>
+      </section>
 
-        <div class="button-group">
-          <button id="btnAgendar" class="btn">Agende Já</button>
-          <button id="contact-btn" class="btn secondary">Contacto</button>
+      <section class="card info-card">
+        <div class="info-grid">
+          <div class="info-item">
+            <h3>Victoria Mazzali</h3>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <p class="label">Telefone</p>
+                <a href="https://wa.me/351936745953" target="_blank" rel="noopener noreferrer">+351 936 745 953</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <p class="label">Email</p>
+                <a href="mailto:victoriatome18@gmail.com">victoriatome18@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <p class="label">Morada</p>
+                <p>Lordelo, Porto</p>
+              </div>
+            </div>
+          </div>
+          <div class="motto-container">
+            <blockquote class="motto">
+              <i class="fas fa-quote-left"></i>
+              Cuide de si. A sua presença merece brilhar.
+              <i class="fas fa-quote-right"></i>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="card services-card">
+        <h2 class="section-title">Nossos Serviços</h2>
+        <div class="grid-3">
+          <div class="service-box">
+            <div class="service-icon">💄</div>
+            <h4>Manicure Real</h4>
+            <p class="small muted">Esmalte gel premium e design detalhado personalizado.</p>
+            <span class="price">A partir de 30€</span>
+          </div>
+          <div class="service-box">
+            <div class="service-icon">✨</div>
+            <h4>Alongamento</h4>
+            <p class="small muted">Tip ou moldagem de gel de alta qualidade.</p>
+            <span class="price">A partir de 45€</span>
+          </div>
+          <div class="service-box">
+            <div class="service-icon">👑</div>
+            <h4>VIP Treatment</h4>
+            <p class="small muted">Massagem relaxante e acabamento dourado exclusivo.</p>
+            <span class="price">A partir de 60€</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="agendamentoSection" class="card booking-card">
+        <h2 class="section-title">Reserve Agora</h2>
+        <p class="section-subtitle">
+          Preencha os dados abaixo e confirme — será enviado para WhatsApp.
+        </p>
+        <form id="booking-form" class="booking-form" novalidate aria-describedby="booking-feedback">
+          <div class="form-group">
+            <label for="client-name">Nome Completo</label>
+            <input
+              id="client-name"
+              name="name"
+              placeholder="Ex: Maria Silva"
+              required
+              aria-required="true"
+            />
+          </div>
+          
+          <div class="form-group">
+            <label for="client-phone">Telefone</label>
+            <input
+              id="client-phone"
+              name="phone"
+              type="tel"
+              placeholder="Ex: 936745953"
+              required
+              aria-required="true"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="service-select">Serviço</label>
+            <select id="service-select" name="service" required>
+              <option value="">Selecione um serviço</option>
+              <option value="Manicure Real">Manicure Real</option>
+              <option value="Alongamento de Unhas">Alongamento de Unhas</option>
+              <option value="Tratamento VIP">Tratamento VIP</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="date">Data</label>
+              <input
+                id="date"
+                name="date"
+                type="date"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="time">Hora</label>
+              <input
+                id="time"
+                name="time"
+                type="time"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Observações (Opcional)</label>
+            <textarea
+              id="notes"
+              name="notes"
+              rows="3"
+              placeholder="Ex: cor preferida, alergias, etc..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="submit">
+            <i class="fab fa-whatsapp"></i> Confirmar e Enviar para WhatsApp
+          </button>
+          <div id="booking-feedback" role="status" aria-live="polite" class="visually-hidden"></div>
+        </form>
+      </section>
+
+      <section id="contact" class="card contact-card">
+        <h2 class="section-title">Entre em Contacto</h2>
+        <div class="contact-methods">
+          <div class="method">
+            <a href="https://wa.me/351936745953" target="_blank" rel="noopener noreferrer" class="contact-link whatsapp">
+              <i class="fab fa-whatsapp"></i>
+              <span>WhatsApp: +351 936 745 953</span>
+            </a>
+          </div>
+          <div class="method">
+            <a href="https://www.instagram.com/victoriamazzalipt?igsh=MTJidXVyMzIwbGxqaw==" target="_blank" rel="noopener noreferrer" class="contact-link instagram">
+              <i class="fab fa-instagram"></i>
+              <span>Instagram: @victoriamazzalipt</span>
+            </a>
+          </div>
+          <div class="method">
+            <a href="mailto:victoriatome18@gmail.com" class="contact-link email">
+              <i class="fas fa-envelope"></i>
+              <span>Email: victoriatome18@gmail.com</span>
+            </a>
+          </div>
+        </div>
+        <p class="small muted contact-text">
+          Lordelo, Porto — Ligue, envie mensagem ou siga-nos nas redes sociais para conhecer os últimos trabalhos.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div>© <strong>Victoria Mazzali</strong> — Nail Atelier Real</div>
+        <div class="small muted">Design real • Atendimento VIP • Experiência Luxuosa</div>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/victoriamazzalipt?igsh=MTJidXVyMzIwbGxqaw==" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/351936745953" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+          </a>
         </div>
       </div>
-    </section>
+    </footer>
 
-    <section class="card">
-      <h3>Victoria Mazzali</h3>
-      <p><strong>Telefone:</strong> +351 936 745 953</p>
-      <p><strong>Email:</strong> victoriatome18@gmail.com</p>
-      <p><strong>Morada:</strong> Lordelo, Porto</p>
-      <blockquote class="motto">“Cuide de si. A sua presença merece brilhar.”</blockquote>
-    </section>
-
-    <section id="services" class="card">
-      <h2>Serviços</h2>
-      <div class="grid-3">
-        <div class="service"><h4>Manicure Real</h4><p class="small muted">Esmalte gel e design detalhado.</p></div>
-        <div class="service"><h4>Alongamento</h4><p class="small muted">Tip ou moldagem personalizada.</p></div>
-        <div class="service"><h4>VIP Treatment</h4><p class="small muted">Massagem, acabamento dourado.</p></div>
-      </div>
-    </section>
-
-    <section id="agendamentoSection" class="card">
-      <h2>Agendamento</h2>
-      <p class="small muted">Preencha os dados e confirme — será enviado para WhatsApp.</p>
-      <form id="booking-form" class="booking-form" novalidate>
-        <input id="client-name" name="name" placeholder="Nome completo" required />
-        <input id="client-phone" name="phone" placeholder="Telefone (ex: 936745953)" required />
-        <label for="service-select">Serviço</label>
-        <select id="service-select" name="service" required>
-          <option value="Manicure Real">Manicure Real</option>
-          <option value="Alongamento de Unhas">Alongamento de Unhas</option>
-          <option value="Tratamento VIP">Tratamento VIP</option>
-        </select>
-        <div class="row">
-          <input id="date" name="date" type="date" placeholder="Data" required />
-          <input id="time" name="time" type="time" placeholder="Hora" required />
-        </div>
-        <textarea id="notes" name="notes" rows="3" placeholder="Observações (ex: cor preferida)"></textarea>
-
-        <button type="submit" class="submit">Confirmar e Enviar para WhatsApp</button>
-      </form>
-    </section>
-
-    <section id="contact" class="card">
-      <h2>Contacto</h2>
-      <p><strong>Telefone:</strong> +351 936 745 953</p>
-      <p><strong>Email:</strong> victoriatome18@gmail.com</p>
-      <p class="small muted">Lordelo, Porto — Ligue ou envie mensagem para confirmar.</p>
-    </section>
-  </main>
-
-  <footer class="card">
-    <div>© <strong>Victoria Mazzali</strong> — Nail Atelier</div>
-    <div class="small muted">Design real • Atendimento VIP</div>
-  </footer>
-
-  <script defer src="index.js"></script>
-</body>
+    <script defer src="index.js"></script>
+  </body>
 </html>
